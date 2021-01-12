@@ -1,0 +1,304 @@
+{% load static %}
+
+<!--packages start-->
+<section class="packages" id="pack">
+    <div class="container">
+        <div class="gallary-header text-center">
+            <h2>
+                {{ pack.heading }}
+            </h2>
+            <p>
+                {{ pack.heading_text }}
+            </p>
+        </div><!--/.gallery-header-->
+        <div class="packages-content">
+            <div class="row">
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-package-item">
+                        {% if pack.dest1_image|length > 0  %}
+                            <img alt="package-place" src='{{ pack.dest1_image.url }}'>
+                        {% else %}
+                            <img alt="package-place" src='{% static "images/packages/p1.jpg" %}'>
+                        {% endif %}
+                        <div class="single-package-item-txt">
+                            <h3>{{ pack.dest1 }} <span class="pull-right">Rs.{{ pack.dest1_price }}</span></h3>
+                            <div class="packages-para">
+                                <p>
+											<span>
+												<i class="fa fa-angle-right"> {{ pack.dest1_days }} days {{ pack.dest2_nights }} nights</i>
+											</span>
+                                    <i class="fa fa-angle-right"> {{ pack.dest1_accomodation }}</i>
+                                </p>
+                                <p>
+											<span>
+												<i class="fa fa-angle-right">  {{ pack.dest1_transportation }}</i>
+											</span>
+                                    <i class="fa fa-angle-right"> {{ pack.dest1_food }}</i>
+                                </p>
+                            </div><!--/.packages-para-->
+                            <div class="packages-review">
+                                <p>
+                                        <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <span>{{ pack.dest1_reviewcount }} review</span>
+                                </p>
+                            </div><!--/.packages-review-->
+                            <div class="about-btn">
+                                <button class="about-view packages-btn">
+                                    book now
+                                </button>
+                                <a href="{% url 'inquiry' %}"> <button class="about-view packages-btn">
+                                    Enquire Now
+                                </button></a>
+                            </div><!--/.about-btn-->
+                        </div><!--/.single-package-item-txt-->
+                    </div><!--/.single-package-item-->
+
+                </div><!--/.col-->
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-package-item">
+                        {% if pack.dest2_image|length > 0  %}
+                            <img alt="package-place" src='{{ pack.dest2_image.url }}'>
+                        {% else %}
+                            <img alt="package-place" src='{% static "images/packages/p2.jpg" %}'>
+                        {% endif %}
+                        <div class="single-package-item-txt">
+                            <h3>{{ pack.dest2 }} <span class="pull-right">Rs.{{ pack.dest2_price }}</span></h3>
+                            <div class="packages-para">
+                                <p>
+											<span>
+												<i class="fa fa-angle-right"> {{ pack.dest2_days }} days {{ pack.dest2_nights }} nights</i>
+											</span>
+                                    <i class="fa fa-angle-right"> {{ pack.dest2_accomodation }}</i>
+                                </p>
+                                <p>
+											<span>
+												<i class="fa fa-angle-right">{{ pack.dest2_transportation }}</i>
+											</span>
+                                    <i class="fa fa-angle-right">{{ pack.dest2_food }}</i>
+                                </p>
+                            </div><!--/.packages-para-->
+                            <div class="packages-review">
+                                <p>
+                                        <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+<!--                                    <i class="fa fa-star"></i>-->
+                                    <span>{{ pack.dest2_reviewcount }} review</span>
+                                </p>
+                            </div><!--/.packages-review-->
+                            <div class="about-btn">
+                                <button class="about-view packages-btn">
+                                    book now
+                                </button>
+                                <a href="{% url 'inquiry' %}"> <button class="about-view packages-btn">
+                                    Enquire Now
+                                </button></a>
+                            </div><!--/.about-btn-->
+                        </div><!--/.single-package-item-txt-->
+                    </div><!--/.single-package-item-->
+
+                </div><!--/.col-->
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-package-item">
+                        {% if pack.dest3_image|length > 0  %}
+                            <img alt="package-place" src='{{ pack.dest3_image.url }}'>
+                        {% else %}
+                            <img alt="package-place" src='{% static "images/packages/p3.jpg" %}'>
+                        {% endif %}
+                        <div class="single-package-item-txt">
+                            <h3>{{ pack.dest3 }} <span class="pull-right">Rs.{{ pack.dest3_price }}</span></h3>
+                            <div class="packages-para">
+                                <p>
+											<span>
+												<i class="fa fa-angle-right"> {{ pack.dest3_days }} days {{ pack.dest3_nights }} nights</i>
+											</span>
+                                    <i class="fa fa-angle-right"> {{ pack.dest3_accomodation }}</i>
+                                </p>
+                                <p>
+											<span>
+												<i class="fa fa-angle-right">  {{ pack.dest3_transportation }}</i>
+											</span>
+                                    <i class="fa fa-angle-right"> {{ pack.dest3_food }}</i>
+                                </p>
+                            </div><!--/.packages-para-->
+                            <div class="packages-review">
+                                <p>
+                                        <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+<!--                                    <i class="fa fa-star"></i>-->
+                                    <span>{{ pack.dest3_reviewcount }} review</span>
+                                </p>
+                            </div><!--/.packages-review-->
+                            <div class="about-btn">
+                                <button class="about-view packages-btn">
+                                    book now
+                                </button>
+                                <a href="{% url 'inquiry' %}"> <button class="about-view packages-btn">
+                                    Enquire Now
+                                </button></a>
+                            </div><!--/.about-btn-->
+                        </div><!--/.single-package-item-txt-->
+                    </div><!--/.single-package-item-->
+
+                </div><!--/.col-->
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-package-item">
+                        {% if pack.dest4_image|length > 0  %}
+                            <img alt="package-place" src='{{ pack.dest4_image.url }}'>
+                        {% else %}
+                            <img alt="package-place" src='{% static "images/packages/p4.jpg" %}'>
+                        {% endif %}
+                        <div class="single-package-item-txt">
+                            <h3>{{ pack.dest4 }} <span class="pull-right">Rs.{{ pack.dest4_price }}</span></h3>
+                            <div class="packages-para">
+                                <p>
+											<span>
+												<i class="fa fa-angle-right"> {{ pack.dest4_days }} days {{ pack.dest4_nights }} nights</i>
+											</span>
+                                    <i class="fa fa-angle-right">{{ pack.dest4_accomodation }}</i>
+                                </p>
+                                <p>
+											<span>
+												<i class="fa fa-angle-right">{{ pack.dest4_transportation }}</i>
+											</span>
+                                    <i class="fa fa-angle-right">{{ pack.dest4_food }}</i>
+                                </p>
+                            </div><!--/.packages-para-->
+                            <div class="packages-review">
+                                <p>
+                                        <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <span>{{ pack.dest4_reviewcount }} review</span>
+                                </p>
+                            </div><!--/.packages-review-->
+                            <div class="about-btn">
+                                <button class="about-view packages-btn">
+                                    book now
+                                </button>
+                                <a href="{% url 'inquiry' %}"> <button class="about-view packages-btn">
+                                    Enquire Now
+                                </button></a>
+                            </div><!--/.about-btn-->
+                        </div><!--/.single-package-item-txt-->
+                    </div><!--/.single-package-item-->
+
+                </div><!--/.col-->
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-package-item">
+                        {% if pack.dest5_image|length > 0  %}
+                            <img alt="package-place" src='{{ pack.dest5_image.url }}'>
+                        {% else %}
+                            <img alt="package-place" src='{% static "images/packages/p5.jpg" %}'>
+                        {% endif %}
+                        <div class="single-package-item-txt">
+                            <h3>{{ pack.dest5 }} <span class="pull-right">Rs.{{ pack.dest5_price }}</span></h3>
+                            <div class="packages-para">
+                                <p>
+											<span>
+												<i class="fa fa-angle-right"> {{ pack.dest5_days }} days {{ pack.dest5_nights }} nights</i>
+											</span>
+                                    <i class="fa fa-angle-right"> {{ pack.dest5_accomodation }} </i>
+                                </p>
+                                <p>
+											<span>
+												<i class="fa fa-angle-right">{{ pack.dest5_transportation }}</i>
+											</span>
+                                    <i class="fa fa-angle-right">{{ pack.dest5_food }}</i>
+                                </p>
+                            </div><!--/.packages-para-->
+                            <div class="packages-review">
+                                <p>
+                                        <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+<!--                                    <i class="fa fa-star"></i>-->
+                                    <span>{{ pack.dest5_reviewcount }} review</span>
+                                </p>
+                            </div><!--/.packages-review-->
+                            <div class="about-btn">
+                                <button class="about-view packages-btn">
+                                    book now
+                                </button>
+                                <a href="{% url 'inquiry' %}"> <button class="about-view packages-btn">
+                                    Enquire Now
+                                </button></a>
+                            </div><!--/.about-btn-->
+                        </div><!--/.single-package-item-txt-->
+                    </div><!--/.single-package-item-->
+
+                </div><!--/.col-->
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-package-item">
+                        {% if pack.dest6_image|length > 0  %}
+                            <img alt="package-place" src='{{ pack.dest6_image.url }}'>
+                        {% else %}
+                            <img alt="package-place" src='{% static "images/packages/p6.jpg" %}'>
+                        {% endif %}
+                        <div class="single-package-item-txt">
+                            <h3>{{ pack.dest6 }} <span class="pull-right">Rs.{{ pack.dest6_price }}</span></h3>
+                            <div class="packages-para">
+                                <p>
+											<span>
+												<i class="fa fa-angle-right"></i> {{ pack.dest6_days }} days {{ pack.dest6_nights }} nights
+											</span>
+                                    <i class="fa fa-angle-right">{{ pack.dest6_accomodation }}</i>
+                                </p>
+                                <p>
+											<span>
+												<i class="fa fa-angle-right">{{ pack.dest6_transportation }}</i>
+											</span>
+                                    <i class="fa fa-angle-right"></i> {{ pack.dest6_food }}
+                                </p>
+                            </div><!--/.packages-para-->
+                            <div class="packages-review">
+                                <p>
+                                        <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <span>{{ pack.dest6_reviewcount }} review</span>
+                                </p>
+                            </div><!--/.packages-review-->
+                            <div class="about-btn">
+                                <button class="about-view packages-btn">
+                                    book now
+                                </button>
+                                <a href="{% url 'inquiry' %}"> <button class="about-view packages-btn">
+                                    Enquire Now
+                                </button></a>
+                            </div><!--/.about-btn-->
+                        </div><!--/.single-package-item-txt-->
+                    </div><!--/.single-package-item-->
+
+                </div><!--/.col-->
+
+            </div><!--/.row-->
+        </div><!--/.packages-content-->
+    </div><!--/.container-->
+
+</section><!--/.packages-->
+<!--packages end-->

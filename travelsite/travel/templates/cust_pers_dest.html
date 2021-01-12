@@ -1,0 +1,492 @@
+{% load static %}
+<html>
+
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href='{% static "css/style1.css" %}' />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<style>
+  .slide:nth-child(1) .slide__bg {
+  left: 0;
+  {% if off.day1_img|length > 0  %}
+  background-image: url("{{ off.day1_img.url }}")
+  {% endif %}
+  }
+  .slide:nth-child(2) .slide__bg {
+  left: -50%;
+  {% if off.day2_img|length > 0  %}
+  background-image: url("{{ off.day2_img.url }}")
+  {% endif %}
+  }
+  .slide:nth-child(3) .slide__bg {
+  left: -100%;
+  {% if off.day3_img|length > 0  %}
+  background-image: url("{{ off.day3_img.url }}")
+  {% endif %}
+  }
+  .slide:nth-child(4) .slide__bg {
+  left: -150%;
+  {% if off.day4_img|length > 0  %}
+  background-image: url("{{ off.day4_img.url }}")
+  {% endif %}
+  }
+  .slide:nth-child(5) .slide__bg {
+  left: -200%;
+  {% if off.day5_img|length > 0  %}
+  background-image: url("{{ off.day5_img.url }}")
+  {% endif %}
+  }
+  .slide:nth-child(6) .slide__bg {
+  left: -250%;
+  {% if off.day6_img|length > 0  %}
+  background-image: url("{{ off.day6_img.url }}")
+  {% endif %}
+  }
+  .slide:nth-child(7) .slide__bg {
+  left: -300%;
+  {% if off.day7_img|length > 0  %}
+  background-image: url("{{ off.day7_img.url }}")
+  {% endif %}
+  }
+  .slide:nth-child(8) .slide__bg {
+  left: -350%;
+  {% if off.day8_img|length > 0  %}
+  background-image: url("{{ off.day8_img.url }}")
+  {% endif %}
+  }
+  .slide:nth-child(9) .slide__bg {
+  left: -400%;
+  {% if off.day9_img|length > 0  %}
+  background-image: url("{{ off.day9_img.url }}")
+  {% endif %}
+  }
+  .slide:nth-child(10) .slide__bg {
+  left: -450%;
+  {% if off.day10_img|length > 0  %}
+  background-image: url("{{ off.day10_img.url }}")
+  {% endif %}
+  }
+  .slide:nth-child(11) .slide__bg {
+  left: -500%;
+  {% if off.day11_img|length > 0  %}
+  background-image: url("{{ off.day11_img.url }}")
+  {% endif %}
+  }
+  .slide:nth-child(12) .slide__bg {
+  left: -550%;
+  {% if off.day12_img|length > 0  %}
+  background-image: url("{{ off.day12_img.url }}")
+  {% endif %}
+  }
+  .slide:nth-child(13) .slide__bg {
+  left: -600%;
+  {% if off.day13_img|length > 0  %}
+  background-image: url("{{ off.day13_img.url }}")
+  {% endif %}
+  }
+  .slide:nth-child(14) .slide__bg {
+  left: -650%;
+  {% if off.day14_img|length > 0  %}
+  background-image: url("{{ off.day14_img.url }}")
+  {% endif %}
+  }
+  .slide:nth-child(15) .slide__bg {
+  left: -700%;
+  {% if off.day15_img|length > 0  %}
+  background-image: url("{{ off.day15_img.url }}")
+  {% endif %}
+  }
+  .slide:nth-child(16) .slide__bg {
+  left: -750%;
+  {% if off.day16_img|length > 0  %}
+  background-image: url("{{ off.day16_img.url }}")
+  {% endif %}
+  }
+  .slide:nth-child(17) .slide__bg {
+  left: -800%;
+  {% if off.day17_img|length > 0  %}
+  background-image: url("{{ off.day17_img.url }}")
+  {% endif %}
+  }
+  .slide:nth-child(18) .slide__bg {
+  left: -850%;
+  {% if off.day18_img|length > 0  %}
+  background-image: url("{{ off.day18_img.url }}")
+  {% endif %}
+  }
+  .slide:nth-child(19) .slide__bg {
+  left: -900%;
+  {% if off.day19_img|length > 0  %}
+  background-image: url("{{ off.day19_img.url }}")
+  {% endif %}
+  }
+  .slide:nth-child(20) .slide__bg {
+  left: -950%;
+  {% if off.day20_img|length > 0  %}
+  background-image: url("{{ off.day20_img.url }}")
+  {% endif %}
+  }
+
+
+
+</style>
+
+</head>
+<body>
+
+<!-- main-menu End -->
+<div class="slider-container">
+  <div class="slider-control left inactive"></div>
+  <div class="slider-control right"></div>
+  <ul class="slider-pagi"></ul>
+  <div class="slider">
+    {# % if off.day1_place|length > 0  % #}
+    <div class="slide slide-0 active">
+      <div class="slide__bg"></div>
+      <div class="slide__content">
+        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+        <div class="slide__text">
+          <h2 class="slide__text-heading">{{ off.place }} <br><br>Day 1</h2>
+          <p class="slide__text-desc"><b><u>{{ off.day1_place }}:</u></b><br>{{ off.day1_text }}</p>
+          <br><br><strong><a href="#" class="slide__text-link">{{ off.price }}/- <br> per person </a></strong><br><br>
+          <a href="#" class="slide__text-link">Book Now</a><br><br>
+          <a href="{% url 'inquiry' %}" class="slide__text-link">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+    {# % endif % #}
+    {# % if off.day2_place|length > 0  % #}
+    <div class="slide slide-1 ">
+      <div class="slide__bg"></div>
+      <div class="slide__content">
+        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+        <div class="slide__text">
+          <h2 class="slide__text-heading">{{ off.place }} <br><br>Day 2</h2>
+          <p class="slide__text-desc"><b><u>{{ off.day2_place }}:</u></b><br>{{ off.day2_text }}</p>
+          <br><br><strong><a href="#" class="slide__text-link">{{ off.price }}/- <br> per person </a></strong><br><br>
+          <a href="#" class="slide__text-link">Book Now</a><br>
+          <a href="{% url 'inquiry' %}" class="slide__text-link">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+    {# % endif % #}
+    {# % if off.day3_place|length > 0  % #}
+    <div class="slide slide-2">
+      <div class="slide__bg"></div>
+      <div class="slide__content">
+        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+        <div class="slide__text">
+          <h2 class="slide__text-heading">{{ off.place }} <br><br>Day 3</h2>
+          <p class="slide__text-desc"><b><u>{{ off.day3_place }}:</u></b><br>{{ off.day3_text }}</p>
+          <br><br><strong><a href="#" class="slide__text-link">{{ off.price }}/- <br> per person </a></strong><br><br>
+          <a href="#" class="slide__text-link">Book Now</a><br>
+          <a href="{% url 'inquiry' %}" class="slide__text-link">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+    {# % endif % #}
+    {# % if off.day4_place|length > 0  % #}
+    <div class="slide slide-3">
+      <div class="slide__bg"></div>
+      <div class="slide__content">
+        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+        <div class="slide__text">
+          <h2 class="slide__text-heading">{{ off.place }} <br><br>Day 4</h2>
+          <p class="slide__text-desc"><b><u>{{ off.day4_place }}:</u></b><br>{{ off.day4_text }}</p>
+          <br><br><strong><a href="#" class="slide__text-link">{{ off.price }}/- <br> per person </a></strong><br><br>
+          <a href="#" class="slide__text-link">Book Now</a><br>
+          <a href="{% url 'inquiry' %}" class="slide__text-link">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+    {# % endif % #}
+    {# % if off.day5_place|length > 0  % #}
+    <div class="slide slide-4">
+      <div class="slide__bg"></div>
+      <div class="slide__content">
+        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+        <div class="slide__text">
+          <h2 class="slide__text-heading">{{ off.place }} <br><br>Day 5</h2>
+          <p class="slide__text-desc"><b><u>{{ off.day5_place }}:</u></b><br>{{ off.day5_text }}</p>
+          <br><br><strong><a href="#" class="slide__text-link">{{ off.price }}/- <br> per person </a></strong><br><br>
+          <a href="#" class="slide__text-link">Book Now</a><br>
+          <a href="{% url 'inquiry' %}" class="slide__text-link">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+    {# % endif % #}
+    {% if off.day6_place|length > 0  %}
+    <div class="slide slide-5">
+      <div class="slide__bg"></div>
+      <div class="slide__content">
+        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+        <div class="slide__text">
+          <h2 class="slide__text-heading">{{ off.place }} <br><br>Day 6</h2>
+          <p class="slide__text-desc"><b><u>{{ off.day6_place }}:</u></b><br>{{ off.day6_text }}</p>
+          <br><br><strong><a href="#" class="slide__text-link">{{ off.price }}/- <br> per person </a></strong><br><br>
+          <a href="#" class="slide__text-link">Book Now</a><br>
+          <a href="{% url 'inquiry' %}" class="slide__text-link">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% if off.day7_place|length > 0  %}
+    <div class="slide slide-6">
+      <div class="slide__bg"></div>
+      <div class="slide__content">
+        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+        <div class="slide__text">
+          <h2 class="slide__text-heading">{{ off.place }} <br><br>Day 7</h2>
+          <p class="slide__text-desc"><b><u>{{ off.day7_place }}:</u></b><br>{{ off.day7_text }}</p>
+          <br><br><strong><a href="#" class="slide__text-link">{{ off.price }}/- <br> per person </a></strong><br><br>
+          <a href="#" class="slide__text-link">Book Now</a><br>
+          <a href="{% url 'inquiry' %}" class="slide__text-link">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% if off.day8_place|length > 0  %}
+    <div class="slide slide-7">
+      <div class="slide__bg"></div>
+      <div class="slide__content">
+        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+        <div class="slide__text">
+          <h2 class="slide__text-heading">{{ off.place }} <br><br>Day 8</h2>
+          <p class="slide__text-desc"><b><u>{{ off.day8_place }}:</u></b><br>{{ off.day8_text }}</p>
+          <br><br><strong><a href="#" class="slide__text-link">{{ off.price }}/- <br> per person </a></strong><br><br>
+          <a href="#" class="slide__text-link">Book Now</a><br>
+          <a href="{% url 'inquiry' %}" class="slide__text-link">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% if off.day9_place|length > 0  %}
+    <div class="slide slide-8">
+      <div class="slide__bg"></div>
+      <div class="slide__content">
+        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+        <div class="slide__text">
+          <h2 class="slide__text-heading">{{ off.place }} <br><br>Day 4</h2>
+          <p class="slide__text-desc"><b><u>{{ off.day9_place }}:</u></b><br>{{ off.day9_text }}</p>
+          <br><br><strong><a href="#" class="slide__text-link">{{ off.price }}/- <br> per person </a></strong><br><br>
+          <a href="#" class="slide__text-link">Book Now</a><br>
+          <a href="{% url 'inquiry' %}" class="slide__text-link">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% if off.day10_place|length > 0  %}
+    <div class="slide slide-9">
+      <div class="slide__bg"></div>
+      <div class="slide__content">
+        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+        <div class="slide__text">
+          <h2 class="slide__text-heading">{{ off.place }} <br><br>Day 10</h2>
+          <p class="slide__text-desc"><b><u>{{ off.day10_place }}:</u></b><br>{{ off.day10_text }}</p>
+          <br><br><strong><a href="#" class="slide__text-link">{{ off.price }}/- <br> per person </a></strong><br><br>
+          <a href="#" class="slide__text-link">Book Now</a><br>
+          <a href="{% url 'inquiry' %}" class="slide__text-link">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% if off.day11_place|length > 0  %}
+    <div class="slide slide-10">
+      <div class="slide__bg"></div>
+      <div class="slide__content">
+        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+        <div class="slide__text">
+          <h2 class="slide__text-heading">{{ off.place }} <br><br>Day 11</h2>
+          <p class="slide__text-desc"><b><u>{{ off.day11_place }}:</u></b><br>{{ off.day11_text }}</p>
+          <br><br><strong><a href="#" class="slide__text-link">{{ off.price }}/- <br> per person </a></strong><br><br>
+          <a href="#" class="slide__text-link">Book Now</a><br>
+          <a href="{% url 'inquiry' %}" class="slide__text-link">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% if off.day12_place|length > 0  %}
+    <div class="slide slide-11">
+      <div class="slide__bg"></div>
+      <div class="slide__content">
+        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+        <div class="slide__text">
+          <h2 class="slide__text-heading">{{ off.place }} <br><br>Day 12</h2>
+          <p class="slide__text-desc"><b><u>{{ off.day12_place }}:</u></b><br>{{ off.day12_text }}</p>
+          <br><br><strong><a href="#" class="slide__text-link">{{ off.price }}/- <br> per person </a></strong><br><br>
+          <a href="#" class="slide__text-link">Book Now</a><br>
+          <a href="{% url 'inquiry' %}" class="slide__text-link">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% if off.day13_place|length > 0  %}
+    <div class="slide slide-12">
+      <div class="slide__bg"></div>
+      <div class="slide__content">
+        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+        <div class="slide__text">
+          <h2 class="slide__text-heading">{{ off.place }} <br><br>Day 13</h2>
+          <p class="slide__text-desc"><b><u>{{ off.day13_place }}:</u></b><br>{{ off.day13_text }}</p>
+          <br><br><strong><a href="#" class="slide__text-link">{{ off.price }}/- <br> per person </a></strong><br><br>
+          <a href="#" class="slide__text-link">Book Now</a><br>
+          <a href="{% url 'inquiry' %}" class="slide__text-link">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% if off.day14_place|length > 0  %}
+    <div class="slide slide-13">
+      <div class="slide__bg"></div>
+      <div class="slide__content">
+        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+        <div class="slide__text">
+          <h2 class="slide__text-heading">{{ off.place }} <br><br>Day 14</h2>
+          <p class="slide__text-desc"><b><u>{{ off.day14_place }}:</u></b><br>{{ off.day14_text }}</p>
+          <br><br><strong><a href="#" class="slide__text-link">{{ off.price }}/- <br> per person </a></strong><br><br>
+          <a href="#" class="slide__text-link">Book Now</a><br>
+          <a href="{% url 'inquiry' %}" class="slide__text-link">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% if off.day15_place|length > 0  %}
+    <div class="slide slide-14">
+      <div class="slide__bg"></div>
+      <div class="slide__content">
+        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+        <div class="slide__text">
+          <h2 class="slide__text-heading">{{ off.place }} <br><br>Day 15</h2>
+          <p class="slide__text-desc"><b><u>{{ off.day15_place }}:</u></b><br>{{ off.day15_text }}</p>
+          <br><br><strong><a href="#" class="slide__text-link">{{ off.price }}/- <br> per person </a></strong><br><br>
+          <a href="#" class="slide__text-link">Book Now</a><br>
+          <a href="{% url 'inquiry' %}" class="slide__text-link">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% if off.day16_place|length > 0  %}
+    <div class="slide slide-15">
+      <div class="slide__bg"></div>
+      <div class="slide__content">
+        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+        <div class="slide__text">
+          <h2 class="slide__text-heading">{{ off.place }} <br><br>Day 16</h2>
+          <p class="slide__text-desc"><b><u>{{ off.day16_place }}:</u></b><br>{{ off.day16_text }}</p>
+          <br><br><strong><a href="#" class="slide__text-link">{{ off.price }}/- <br> per person </a></strong><br><br>
+          <a href="#" class="slide__text-link">Book Now</a><br>
+          <a href="{% url 'inquiry' %}" class="slide__text-link">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% if off.day17_place|length > 0  %}
+    <div class="slide slide-16">
+      <div class="slide__bg"></div>
+      <div class="slide__content">
+        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+        <div class="slide__text">
+          <h2 class="slide__text-heading">{{ off.place }} <br><br>Day 17</h2>
+          <p class="slide__text-desc"><b><u>{{ off.day17_place }}:</u></b><br>{{ off.day17_text }}</p>
+          <br><br><strong><a href="#" class="slide__text-link">{{ off.price }}/- <br> per person </a></strong><br><br>
+          <a href="#" class="slide__text-link">Book Now</a><br>
+          <a href="{% url 'inquiry' %}" class="slide__text-link">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% if off.day18_place|length > 0  %}
+    <div class="slide slide-17">
+      <div class="slide__bg"></div>
+      <div class="slide__content">
+        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+        <div class="slide__text">
+          <h2 class="slide__text-heading">{{ off.place }} <br><br>Day 18</h2>
+          <p class="slide__text-desc"><b><u>{{ off.day18_place }}:</u></b><br>{{ off.day18_text }}</p>
+          <br><br><strong><a href="#" class="slide__text-link">{{ off.price }}/- <br> per person </a></strong><br><br>
+          <a href="#" class="slide__text-link">Book Now</a><br>
+          <a href="{% url 'inquiry' %}" class="slide__text-link">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% if off.day19_place|length > 0  %}
+    <div class="slide slide-18">
+      <div class="slide__bg"></div>
+      <div class="slide__content">
+        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+        <div class="slide__text">
+          <h2 class="slide__text-heading">{{ off.place }} <br><br>Day 19</h2>
+          <p class="slide__text-desc"><b><u>{{ off.day19_place }}:</u></b><br>{{ off.day19_text }}</p>
+          <br><br><strong><a href="#" class="slide__text-link">{{ off.price }}/- <br> per person </a></strong><br><br>
+          <a href="#" class="slide__text-link">Book Now</a><br>
+          <a href="{% url 'inquiry' %}" class="slide__text-link">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% if off.day20_place|length > 0  %}
+    <div class="slide slide-19">
+      <div class="slide__bg"></div>
+      <div class="slide__content">
+        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+        <div class="slide__text">
+          <h2 class="slide__text-heading">{{ off.place }} <br><br>Day 20</h2>
+          <p class="slide__text-desc"><b><u>{{ off.day20_place }}:</u></b><br>{{ off.day20_text }}</p>
+          <br><br><strong><a href="#" class="slide__text-link">{{ off.price }}/- <br> per person </a></strong><br><br>
+          <a href="#" class="slide__text-link">Book Now</a><br>
+          <a href="{% url 'inquiry' %}" class="slide__text-link">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+</div>
+
+<script src='{% static "js/main.js" %}'></script>
+
+</body>
+</html>

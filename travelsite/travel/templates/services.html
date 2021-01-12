@@ -1,0 +1,62 @@
+{% load static %}
+
+<!--service start-->
+<section class="service" id="service">
+    <div class="container">
+
+        <div class="service-counter text-center">
+
+            <div class="col-md-4 col-sm-4">
+                <div class="single-service-box">
+                    <div class="service-img">
+                        <img alt="service-icon" src='{% static "images/service/s1.png" %}'/>
+                    </div><!--/.service-img-->
+                    <div class="service-content">
+                        <h2>
+                            <a href="#">
+                                {{ serv.serv1_heading }}
+                            </a>
+                        </h2>
+                        <p> {{ serv.serv1_text }}</p>
+                    </div><!--/.service-content-->
+                </div><!--/.single-service-box-->
+            </div><!--/.col-->
+
+            <div class="col-md-4 col-sm-4">
+                <div class="single-service-box">
+                    <div class="service-img">
+                        <img alt="service-icon" src='{% static "images/service/s2.png" %}'/>
+                    </div><!--/.service-img-->
+                    <div class="service-content">
+                        <h2>
+                            <a href="#">
+                                 {{ serv.serv2_heading }}
+                            </a>
+                        </h2>
+                        <p> {{ serv.serv2_text }}</p>
+                    </div><!--/.service-content-->
+                </div><!--/.single-service-box-->
+            </div><!--/.col-->
+
+            <div class="col-md-4 col-sm-4">
+                <div class="single-service-box">
+                    <div class="statistics-img">
+                        <img alt="service-icon" src='{% static "images/service/s3.png" %}'/>
+                    </div><!--/.service-img-->
+                    <div class="service-content">
+
+                        <h2>
+                            <a href="#">
+                                 {{ serv.serv3_heading }}
+                            </a>
+                        </h2>
+                        <p> {{ serv.serv3_text }}</p>
+                    </div><!--/.service-content-->
+                </div><!--/.single-service-box-->
+            </div><!--/.col-->
+
+        </div><!--/.statistics-counter-->
+    </div><!--/.container-->
+
+</section><!--/.service-->
+<!--service end-->

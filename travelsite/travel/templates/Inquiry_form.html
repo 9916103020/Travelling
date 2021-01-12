@@ -1,0 +1,239 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!--    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">-->
+<!--    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">-->
+    <style>
+      html, body {
+      min-height: 100%;
+      padding: 0;
+      margin: 0;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      }
+      h1 {
+      margin: 0 0 20px;
+      font-weight: 400;
+      color: #1c87c9;
+      }
+      p {
+      margin: 0 0 5px;
+      }
+      .main-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: url({% static "/images/offer/scene.jpg" %})no-repeat center;
+      }
+      form {
+      padding: 25px;
+      margin: 25px;
+      box-shadow: 0 2px 5px #f5f5f5;
+      background: #f5f5f5;
+      }
+      .fas {
+      margin: 25px 10px 0;
+      font-size: 72px;
+      color: #fff;
+      }
+      .fa-envelope {
+      transform: rotate(-20deg);
+      }
+      .fa-at , .fa-mail-bulk{
+      transform: rotate(10deg);
+      }
+      input, textarea {
+      width: calc(100% - 18px);
+      padding: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #1c87c9;
+      outline: none;
+      }
+      input::placeholder {
+      color: #666;
+      }
+      button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background: #1c87c9;
+      font-size: 16px;
+      font-weight: 400;
+      color: #fff;
+      }
+      button:hover {
+      background: #2371a0;
+      }
+      @media (min-width: 568px) {
+      .main-block {
+      flex-direction: row;
+      }
+      .left-part, form {
+      width: 50%;
+      }
+      .fa-envelope {
+      margin-top: 0;
+      margin-left: 20%;
+      }
+      .fa-at {
+      margin-top: -10%;
+      margin-left: 65%;
+      }
+      .fa-mail-bulk {
+      margin-top: 2%;
+      margin-left: 28%;
+      }
+      }
+    </style>
+
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+    your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<!-- main-menu Start -->
+<header class="top-area">
+    <div class="header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="logo">
+                        <a href="{% url 'home' %}">
+                            New<span>Travels</span>
+                        </a>
+                    </div><!-- /.logo-->
+                </div><!-- /.col-->
+                <div class="col-sm-10">
+                    <div class="main-menu">
+
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse"
+                                    type="button">
+                                <i class="fa fa-bars"></i>
+                            </button><!-- / button-->
+                        </div><!-- /.navbar-header-->
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="smooth-menu"><a href="#contactus">ContactUs</a></li>
+<!--                                    <button class="book-btn">book now-->
+<!--                                    </button>-->
+                                </li><!--/.project-btn-->
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.main-menu-->
+                </div><!-- /.col-->
+            </div><!-- /.row -->
+            <div class="home-border"></div><!-- /.home-border-->
+        </div><!-- /.container-->
+    </div><!-- /.header-area -->
+
+</header><!-- /.top-area-->
+<!-- main-menu End -->
+
+ <div class="main-block">
+ <form method="post">
+     {% csrf_token %}
+        <h1>Contact Us</h1>
+        <div class="info">
+          <input class="fname" type="text" name="name" id="name" placeholder="Full name" required>
+          <input type="text" name="email" id="email" placeholder="Email" required>
+          <input type="text" name="phone" id="phone" placeholder="Phone number" required>
+            <input type="text" name="subject" id="subj" placeholder="Subject" required>
+        </div>
+        <p>Message</p>
+        <div>
+          <textarea id="msg" rows="8" name="msg" required></textarea>
+        </div>
+        <button type="submit" onclick="inquiry()">Submit</button>
+ </form>
+ </div>
+<!-- footer-copyright start -->
+<footer class="footer-copyright" id="contactus">
+    <div class="container">
+        <div class="footer-content">
+            <div class="row">
+
+                <div class="col-sm-3">
+                    <div class="single-footer-item">
+                        <div class="footer-logo">
+                            <a href="{% url 'home' %}">
+                                tour<span>Nest</span>
+                            </a>
+                            <p>
+                                {{ foot.text }}
+                            </p>
+                        </div>
+                    </div><!--/.single-footer-item-->
+                </div><!--/.col-->
+
+                <div class="col-sm-3">
+                    <div class="single-footer-item">
+<!--                        <h2>{{ foot.link_text }}</h2>-->
+                        <div class="single-footer-txt">
+<!--                            <p class="smooth-menu"><a href="#home">home</a></p>-->
+<!--                            <p><a href="#gallery">destination</a></p>-->
+<!--                            <p><a href="#pack">Packages</a></p>-->
+<!--                            <p><a href="#spo">special offers</a></p>-->
+<!--                            <p><a href="#">blog</a></p>-->
+<!--                            <p><a href="#">contacts</a></p>-->
+                        </div><!--/.single-footer-txt-->
+                    </div><!--/.single-footer-item-->
+
+                </div><!--/.col-->
+
+                <div class="col-sm-3">
+                    <div class="single-footer-item">
+<!--                        <h2>{{ foot.popular_text }}</h2>-->
+                        <div class="single-footer-txt">
+<!--                            <p><a href="#pack">{{ pack.dest1 }}</a></p>-->
+<!--                            <p><a href="#pack">{{ pack.dest2 }}</a></p>-->
+<!--                            <p><a href="#pack">{{ pack.dest3 }}</a></p>-->
+<!--                            <p><a href="#pack">{{ pack.dest4 }}</a></p>-->
+<!--                            <p><a href="#pack">{{ pack.dest5 }}</a></p>-->
+                        </div><!--/.single-footer-txt-->
+                    </div><!--/.single-footer-item-->
+                </div><!--/.col-->
+
+
+
+                <div class="col-sm-3">
+                    <div class="single-footer-item text-center">
+                        <h2 class="text-left">contacts</h2>
+                        <div class="single-footer-txt text-left">
+                            <p>+({{ foot.phonecode }})-{{ foot.phonenumber }}</p>
+                            <p class="foot-email"><a href="{% url 'inquiry' %}">{{ foot.emailid }}</a></p>
+                            <p>{{ foot.address1 }}</p>
+                            <p>{{ foot.address2 }}</p>
+                        </div><!--/.single-footer-txt-->
+                    </div><!--/.single-footer-item-->
+                </div><!--/.col-->
+
+            </div><!--/.row-->
+
+        </div><!--/.footer-content-->
+        <hr>
+        <div class="foot-icons ">
+            <ul class="footer-social-links list-inline list-unstyled">
+                <li><a class="foot-icon-bg-1" href="{{ foot.fac_href }}" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="foot-icon-bg-2" href="{{ foot.twitter_href }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="foot-icon-bg-3" href="{{ foot.insta_href }}" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+            <p>&copy; 2020 <a href="{% url 'home' %}">{{ title.heading }}</a>. All Right Reserved</p>
+
+        </div><!--/.foot-icons-->
+        <div id="scroll-Top">
+            <i aria-hidden="true" class="fa fa-angle-double-up return-to-top" data-original-title="Back to Top" data-placement="top"
+               data-toggle="tooltip" id="scroll-top" title=""></i>
+        </div><!--/.scroll-Top-->
+    </div><!-- /.container-->
+
+</footer><!-- /.footer-copyright-->
+<!-- footer-copyright end -->
+
+{% endblock %}

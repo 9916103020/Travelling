@@ -1,0 +1,260 @@
+{% load static %}
+
+<!-- testemonial Start -->
+<section class="testemonial">
+    <div class="container">
+
+        <div class="gallary-header text-center">
+            <h2>
+                {{ client.client_heading }}
+            </h2>
+            <p>
+                {{ client.client_text }}
+            </p>
+
+        </div><!--/.gallery-header-->
+
+        <div class="owl-carousel owl-theme" id="testemonial-carousel">
+
+            <div class="home1-testm item">
+                <div class="home1-testm-single text-center">
+                    <div class="home1-testm-img">
+                        {% if client.customer1_image|length > 0  %}
+                            <img alt="package-place" src="{{ client.customer1_image.url }}">
+                        {% else %}
+                            <img alt="img" src='{% static "images/client/testimonial1.jpg" %}'/>
+                        {% endif %}
+                    </div><!--/.home1-testm-img-->
+                    <div class="home1-testm-txt">
+								<span class="icon section-icon">
+									<i aria-hidden="true" class="fa fa-quote-left"></i>
+								</span>
+                        <p>
+                            {{ client.customer_review_1 }}
+                        </p>
+                        <h3>
+                            <a href="#">
+                                {{ client.customer_name_1 }}
+                            </a>
+                        </h3>
+                        <h4>{{ client.customer_location_1 }}</h4>
+                    </div><!--/.home1-testm-txt-->
+                </div><!--/.home1-testm-single-->
+
+            </div><!--/.item-->
+
+            <div class="home1-testm item">
+                <div class="home1-testm-single text-center">
+                    <div class="home1-testm-img">
+                        {% if client.customer2_image|length > 0  %}
+                            <img alt="package-place" src="{{ client.customer2_image.url }}">
+                        {% else %}
+                            <img alt="img" src='{% static "images/client/testimonial2.jpg" %}'/>
+                        {% endif %}
+                    </div><!--/.home1-testm-img-->
+                    <div class="home1-testm-txt">
+								<span class="icon section-icon">
+									<i aria-hidden="true" class="fa fa-quote-left"></i>
+								</span>
+                        <p>
+                            {{ client.customer_review_2 }}
+                        </p>
+                        <h3>
+                            <a href="#">
+                                {{ client.customer_name_2 }}
+                            </a>
+                        </h3>
+                        <h4>{{ client.customer_location_2 }}</h4>
+                    </div><!--/.home1-testm-txt-->
+                </div><!--/.home1-testm-single-->
+
+            </div><!--/.item-->
+
+            <div class="home1-testm item">
+                <div class="home1-testm-single text-center">
+                    <div class="home1-testm-img">
+                        {% if client.customer3_image|length > 0  %}
+                            <img alt="package-place" src="{{ client.customer3_image.url }}">
+                        {% else %}
+                            <img alt="img" src='{% static "images/client/testimonial2.jpg" %}'/>
+                        {% endif %}
+                    </div><!--/.home1-testm-img-->
+                    <div class="home1-testm-txt">
+								<span class="icon section-icon">
+									<i aria-hidden="true" class="fa fa-quote-left"></i>
+								</span>
+                        <p>
+                            {{ client.customer_review_3 }}
+                        </p>
+                        <h3>
+                            <a href="#">
+                                {{ client.customer_name_3 }}
+                            </a>
+                        </h3>
+                        <h4>{{ client.customer_location_3 }}</h4>
+                    </div><!--/.home1-testm-txt-->
+                </div><!--/.home1-testm-single-->
+
+            </div><!--/.item-->
+
+            <div class="home1-testm item">
+                <div class="home1-testm-single text-center">
+                    <div class="home1-testm-img">
+                        {% if client.customer4_image|length > 0  %}
+                            <img alt="package-place" src="{{ client.customer4_image.url }}">
+                        {% else %}
+                            <img alt="img" src='{% static "images/client/testimonial1.jpg" %}'/>
+                        {% endif %}
+                    </div><!--/.home1-testm-img-->
+                    <div class="home1-testm-txt">
+								<span class="icon section-icon">
+									<i aria-hidden="true" class="fa fa-quote-left"></i>
+								</span>
+                        <p>
+                            {{ client.customer_review_4 }}
+                        </p>
+                        <h3>
+                            <a href="#">
+                                {{ client.customer_name_4 }}
+                            </a>
+                        </h3>
+                        <h4>{{ client.customer_location_4 }}</h4>
+                    </div><!--/.home1-testm-txt-->
+                </div><!--/.home1-testm-single-->
+
+            </div><!--/.item-->
+
+            <div class="home1-testm item">
+                <div class="home1-testm-single text-center">
+                    <div class="home1-testm-img">
+                        {% if client.customer5_image|length > 0  %}
+                            <img alt="package-place" src="{{ client.customer5_image.url }}">
+                        {% else %}
+                            <img alt="img" src='{% static "images/client/testimonial1.jpg" %}'/>
+                        {% endif %}
+                    </div><!--/.home1-testm-img-->
+                    <div class="home1-testm-txt">
+								<span class="icon section-icon">
+									<i aria-hidden="true" class="fa fa-quote-left"></i>
+								</span>
+                        <p>
+                            {{ client.customer_review_5 }}
+                        </p>
+                        <h3>
+                            <a href="#">
+                                {{ client.customer_name_5 }}
+                            </a>
+                        </h3>
+                        <h4>{{ client.customer_location_5 }}</h4>
+                    </div><!--/.home1-testm-txt-->
+                </div><!--/.home1-testm-single-->
+
+            </div><!--/.item-->
+
+            <div class="home1-testm item">
+                <div class="home1-testm-single text-center">
+                    <div class="home1-testm-img">
+                        {% if client.customer6_image|length > 0  %}
+                            <img alt="package-place" src="{{ client.customer6_image.url }}">
+                        {% else %}
+                            <img alt="img" src='{% static "images/client/testimonial1.jpg" %}'/>
+                        {% endif %}
+                    </div><!--/.home1-testm-img-->
+                    <div class="home1-testm-txt">
+								<span class="icon section-icon">
+									<i aria-hidden="true" class="fa fa-quote-left"></i>
+								</span>
+                        <p>
+                            {{ client.customer_review_6 }}
+                        </p>
+                        <h3>
+                            <a href="#">
+                                {{ client.customer_name_6 }}
+                            </a>
+                        </h3>
+                        <h4>{{ client.customer_location_6 }}</h4>
+                    </div><!--/.home1-testm-txt-->
+                </div><!--/.home1-testm-single-->
+
+            </div><!--/.item-->
+
+            <div class="home1-testm item">
+                <div class="home1-testm-single text-center">
+                    <div class="home1-testm-img">
+                        {% if client.customer7_image|length > 0  %}
+                            <img alt="package-place" src="{{ client.customer7_image.url }}">
+                        {% else %}
+                            <img alt="img" src='{% static "images/client/testimonial1.jpg" %}'/>
+                        {% endif %}
+                    </div><!--/.home1-testm-img-->
+                    <div class="home1-testm-txt">
+								<span class="icon section-icon">
+									<i aria-hidden="true" class="fa fa-quote-left"></i>
+								</span>
+                        <p>
+                            {{ client.customer_review_7 }}
+                        </p>
+                        <h3>
+                            <a href="#">
+                                {{ client.customer_name_7 }}
+                            </a>
+                        </h3>
+                        <h4>{{ client.customer_location_7 }}</h4>
+                    </div><!--/.home1-testm-txt-->
+                </div><!--/.home1-testm-single-->
+
+            </div><!--/.item-->
+
+<!--            <div class="home1-testm item">-->
+<!--                <div class="home1-testm-single text-center">-->
+<!--                    <div class="home1-testm-img">-->
+<!--                        <img alt="img" src='{% static "images/client/testimonial2.jpg" %}'/>-->
+<!--                    </div>&lt;!&ndash;/.home1-testm-img&ndash;&gt;-->
+<!--                    <div class="home1-testm-txt">-->
+<!--								<span class="icon section-icon">-->
+<!--									<i aria-hidden="true" class="fa fa-quote-left"></i>-->
+<!--								</span>-->
+<!--                        <p>-->
+<!--                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna-->
+<!--                            aliqua. Ut enim ad minim veniam.-->
+<!--                        </p>-->
+<!--                        <h3>-->
+<!--                            <a href="#">-->
+<!--                                kevin watson-->
+<!--                            </a>-->
+<!--                        </h3>-->
+<!--                        <h4>london, england</h4>-->
+<!--                    </div>&lt;!&ndash;/.home1-testm-txt&ndash;&gt;-->
+<!--                </div>&lt;!&ndash;/.home1-testm-single&ndash;&gt;-->
+
+<!--            </div>&lt;!&ndash;/.item&ndash;&gt;-->
+
+<!--            <div class="home1-testm item">-->
+<!--                <div class="home1-testm-single text-center">-->
+<!--                    <div class="home1-testm-img">-->
+<!--                        <img alt="img" src='{% static "images/client/testimonial1.jpg" %}'/>-->
+<!--                    </div>&lt;!&ndash;/.home1-testm-img&ndash;&gt;-->
+<!--                    <div class="home1-testm-txt">-->
+<!--								<span class="icon section-icon">-->
+<!--									<i aria-hidden="true" class="fa fa-quote-left"></i>-->
+<!--								</span>-->
+<!--                        <p>-->
+<!--                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna-->
+<!--                            aliqua. Ut enim ad minim veniam.-->
+<!--                        </p>-->
+<!--                        <h3>-->
+<!--                            <a href="#">-->
+<!--                                kevin watson-->
+<!--                            </a>-->
+<!--                        </h3>-->
+<!--                        <h4>london, england</h4>-->
+<!--                    </div>&lt;!&ndash;/.home1-testm-txt&ndash;&gt;-->
+<!--                </div>&lt;!&ndash;/.home1-testm-single&ndash;&gt;-->
+
+<!--            </div>&lt;!&ndash;/.item&ndash;&gt;-->
+
+        </div><!--/.testemonial-carousel-->
+    </div><!--/.container-->
+
+</section><!--/.testimonial-->
+<!-- testemonial End -->

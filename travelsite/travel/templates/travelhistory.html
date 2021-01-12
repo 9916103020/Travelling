@@ -1,0 +1,66 @@
+{% load static %}
+
+<!--travel-box start-->
+<section class="travel-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="single-travel-boxes">
+                    <div class="desc-tabs" id="desc-tabs">
+
+                        <ul class="nav nav-tabs" role="tablist">
+
+                            <li class="active" role="presentation">
+                                <a aria-controls="tours" data-toggle="tab" href="#tours" role="tab">
+                                    <i class="fa fa-tree"></i>
+                                    tours
+                                </a>
+                            </li>
+
+                            <li role="presentation">
+
+                            </li>
+
+                            <li role="presentation">
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+
+                            <div class="tab-pane active fade in" id="tours" role="tabpanel">
+                                <div class="tab-para">
+
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-12">
+                                            <div class="single-tab-select-box">
+
+                                                <h2>destination</h2>
+
+                                                <div class="travel-select-icon">
+                                                    <select class="form-control " onchange="window.location.href=this.value">
+                                                        <option value="default">enter your destination location</option>
+                                                        <!-- /.option-->
+                                                        {% for i in trp %}
+                                                       <option value="personal?trip={{ i.trip }}">{{ i.trip }}</option><!-- /.option-->
+                                                        {% endfor %}
+
+                                                    </select><!-- /.select-->
+                                                </div><!-- /.travel-select-icon -->
+
+
+                                            </div><!--/.single-tab-select-box-->
+                                        </div><!--/.col-->
+
+                                    </div><!--/.row-->
+
+                        </div><!--/.tab content-->
+
+                    </div><!--/.desc-tabs-->
+                </div><!--/.single-travel-box-->
+  </div><!--/.col-->
+        </div><!--/.row-->
+    </div><!--/.container-->
+        </div>
+</section><!--/.travel-box-->
+<!--travel-box end-->

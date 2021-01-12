@@ -1,0 +1,137 @@
+{% load static %}
+
+<!--galley start-->
+<section class="gallery" id="gallery">
+    <div class="container">
+        <div class="gallery-details">
+            <div class="gallary-header text-center">
+                <h2>
+                    {{ dest.top_heading }}
+                </h2>
+                <p>
+                    {{ dest.dest_text }}
+                </p>
+            </div><!--/.gallery-header-->
+            <div class="gallery-box">
+                <div class="gallery-content">
+                    <div class="filtr-container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="filtr-item">
+                                    {% if dest.dest1_image|length > 0  %}
+                                        <img alt="package-place" src='{{ dest.dest1_image.url }}'>
+                                    {% else %}
+                                        <img alt="portfolio image" src='{% static "images/gallary/g1.jpg" %}'/>
+                                    {% endif %}
+                                    <div class="item-title">
+                                        <a href="personal?trip={{ dest.dest1_name }}">
+                                            {{ dest.dest1_name }}
+                                        </a>
+                                        <p><span>{{ dest.no_tours_1 }} tours</span></p>
+                                        <p><span>{{ dest.no_places_1 }} places</span></p>
+                                        <p><strong><span>Price Rs. {{ dest.dest1_price }}</span></strong></p>
+                                    </div><!-- /.item-title -->
+                                </div><!-- /.filtr-item -->
+                            </div><!-- /.col -->
+
+
+                            <div class="col-md-6">
+                                <div class="filtr-item">
+                                    {% if dest.dest2_image|length > 0  %}
+                                        <img alt="package-place" src='{{ dest.dest2_image.url }}'>
+                                    {% else %}
+                                        <img alt="portfolio image" src='{% static "images/gallary/g2.jpg" %}'/>
+                                    {% endif %}
+                                    <div class="item-title">
+                                        <a href="personal?trip={{ dest.dest2_name }}">
+                                            {{ dest.dest2_name }}
+                                        </a>
+                                        <p><span>{{ dest.no_tours_2 }} tours</span></p>
+                                        <p><span>{{ dest.no_places_2 }} places</span></p>
+                                        <p><strong><span>Price Rs. {{ dest.dest2_price }}</span></strong></p>
+                                    </div> <!-- /.item-title-->
+                                </div><!-- /.filtr-item -->
+                            </div><!-- /.col -->
+
+                            <div class="col-md-4">
+                                <div class="filtr-item">
+                                    {% if dest.dest3_image|length > 0  %}
+                                        <img alt="package-place" src='{{ dest.dest3_image.url }}'>
+                                    {% else %}
+                                        <img alt="portfolio image" src='{% static "images/gallary/g3.jpg" %}'/>
+                                    {% endif %}
+                                    <div class="item-title">
+                                        <a href="personal?trip={{ dest.dest3_name }}">
+                                            {{ dest.dest3_name }}
+                                        </a>
+                                        <p><span>{{ dest.no_tours_3 }} tours</span></p>
+                                        <p><span>{{ dest.no_places_3 }} places</span></p>
+                                        <p><strong><span>Price Rs. {{ dest.dest3_price }}</span></strong></p>
+                                    </div><!-- /.item-title -->
+                                </div><!-- /.filtr-item -->
+                            </div><!-- /.col -->
+
+                            <div class="col-md-4">
+                                <div class="filtr-item">
+                                    {% if dest.dest4_image|length > 0  %}
+                                        <img alt="package-place" src='{{ dest.dest4_image.url }}'>
+                                    {% else %}
+                                        <img alt="portfolio image" src='{% static "images/gallary/g4.jpg" %}'/>
+                                    {% endif %}
+                                    <div class="item-title">
+                                        <a href="personal?trip={{ dest.dest4_name }}">
+                                            {{ dest.dest4_name }}
+                                        </a>
+                                        <p><span>{{ dest.no_tours_4 }} tours</span></p>
+                                        <p><span>{{ dest.no_places_4 }} places</span></p>
+                                        <p><strong><span>Price Rs. {{ dest.dest4_price }}</span></strong></p>
+                                    </div> <!-- /.item-title-->
+                                </div><!-- /.filtr-item -->
+                            </div><!-- /.col -->
+
+                            <div class="col-md-4">
+                                <div class="filtr-item">
+                                    {% if dest.dest5_image|length > 0  %}
+                                        <img alt="package-place" src='{{ dest.dest5_image.url }}'>
+                                    {% else %}
+                                        <img alt="portfolio image" src='{% static "images/gallary/g5.jpg" %}'/>
+                                    {% endif %}
+                                    <div class="item-title">
+                                        <a href="personal?trip={{ dest.dest5_name }}">
+                                            {{ dest.dest5_name }}
+                                        </a>
+                                        <p><span>{{ dest.no_tours_5 }} tours</span></p>
+                                        <p><span>{{ dest.no_places_5 }} places</span></p>
+                                        <p><strong><span>Price Rs. {{ dest.dest5_price }}</span></strong></p>
+                                    </div> <!-- /.item-title-->
+                                </div><!-- /.filtr-item -->
+                            </div><!-- /.col -->
+
+                            <div class="col-md-8">
+                                <div class="filtr-item">
+                                    {% if dest.dest6_image|length > 0  %}
+                                        <img alt="package-place" src='{{ dest.dest6_image.url }}'>
+                                    {% else %}
+                                        <img alt="portfolio image" src='{% static "images/gallary/g6.jpg" %}'/>
+                                    {% endif %}
+                                    <div class="item-title">
+                                        <a href="personal?trip={{ dest.dest6_name }}">
+                                            {{ dest.dest6_name }}
+                                        </a>
+                                        <p><span>{{ dest.no_tours_6 }} tours</span></p>
+                                        <p><span>{{ dest.no_places_6 }} places</span></p>
+                                        <p><strong><span>Price Rs. {{ dest.dest6_price }}</span></strong></p>
+                                    </div> <!-- /.item-title-->
+                                </div><!-- /.filtr-item -->
+                            </div><!-- /.col -->
+
+                        </div><!-- /.row -->
+
+                    </div><!-- /.filtr-container-->
+                </div><!-- /.gallery-content -->
+            </div><!--/.galley-box-->
+        </div><!--/.gallery-details-->
+    </div><!--/.container-->
+
+</section><!--/.gallery-->
+<!--gallery end-->

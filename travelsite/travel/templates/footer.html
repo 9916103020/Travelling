@@ -1,0 +1,80 @@
+<!-- footer-copyright start -->
+<footer class="footer-copyright" id="contactus">
+    <div class="container">
+        <div class="footer-content">
+            <div class="row">
+
+                <div class="col-sm-3">
+                    <div class="single-footer-item">
+                        <div class="footer-logo">
+                            <a href="{% url 'home' %}">
+                                tour<span>Nest</span>
+                            </a>
+                            <p>
+                                {{ foot.text }}
+                            </p>
+                        </div>
+                    </div><!--/.single-footer-item-->
+                </div><!--/.col-->
+
+                <div class="col-sm-3">
+                    <div class="single-footer-item">
+                        <h2>{{ foot.link_text }}</h2>
+                        <div class="single-footer-txt">
+                            <p class="smooth-menu"><a href="#home">home</a></p>
+                            <p><a href="#gallery">destination</a></p>
+                            <p><a href="#pack">Packages</a></p>
+                            <p><a href="#spo">special offers</a></p>
+<!--                            <p><a href="#">blog</a></p>-->
+<!--                            <p><a href="#">contacts</a></p>-->
+                        </div><!--/.single-footer-txt-->
+                    </div><!--/.single-footer-item-->
+
+                </div><!--/.col-->
+
+                <div class="col-sm-3">
+                    <div class="single-footer-item">
+                        <h2>{{ foot.popular_text }}</h2>
+                        <div class="single-footer-txt">
+                            <p><a href="#pack">{{ pack.dest1 }}</a></p>
+                            <p><a href="#pack">{{ pack.dest2 }}</a></p>
+                            <p><a href="#pack">{{ pack.dest3 }}</a></p>
+                            <p><a href="#pack">{{ pack.dest4 }}</a></p>
+                            <p><a href="#pack">{{ pack.dest5 }}</a></p>
+                        </div><!--/.single-footer-txt-->
+                    </div><!--/.single-footer-item-->
+                </div><!--/.col-->
+
+                <div class="col-sm-3">
+                    <div class="single-footer-item text-center">
+                        <h2 class="text-left">contacts</h2>
+                        <div class="single-footer-txt text-left">
+                            <p>+({{ foot.phonecode }})-{{ foot.phonenumber }}</p>
+                            <p class="foot-email"><a href="{% url 'inquiry' %}">{{ foot.emailid }}</a></p>
+                            <p>{{ foot.address1 }}</p>
+                            <p>{{ foot.address2 }}</p>
+                        </div><!--/.single-footer-txt-->
+                    </div><!--/.single-footer-item-->
+                </div><!--/.col-->
+
+            </div><!--/.row-->
+
+        </div><!--/.footer-content-->
+        <hr>
+        <div class="foot-icons ">
+            <ul class="footer-social-links list-inline list-unstyled">
+                <li><a class="foot-icon-bg-1" href="{{ foot.fac_href }}" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="foot-icon-bg-2" href="{{ foot.twitter_href }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="foot-icon-bg-3" href="{{ foot.insta_href }}" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+            <p>&copy; 2020 <a href="{% url 'home' %}">{{ title.heading }}</a>. All Right Reserved</p>
+
+        </div><!--/.foot-icons-->
+        <div id="scroll-Top">
+            <i aria-hidden="true" class="fa fa-angle-double-up return-to-top" data-original-title="Back to Top" data-placement="top"
+               data-toggle="tooltip" id="scroll-top" title=""></i>
+        </div><!--/.scroll-Top-->
+    </div><!-- /.container-->
+
+</footer><!-- /.footer-copyright-->
+<!-- footer-copyright end -->
