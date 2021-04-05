@@ -28,7 +28,7 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      background: url({% static "/images/offer/scene.jpg" %})no-repeat center;
+      background: url("{{ title.main_pic.url }}")no-repeat center;
       }
       form {
       padding: 25px;
@@ -104,7 +104,7 @@
                 <div class="col-sm-2">
                     <div class="logo">
                         <a href="{% url 'home' %}">
-                            New<span>Travels</span>
+                            YOUNG<span>SKYTRAVElS</span>
                         </a>
                     </div><!-- /.logo-->
                 </div><!-- /.col-->
