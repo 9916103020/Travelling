@@ -48,7 +48,7 @@ def inquiry(request):
         name = request.POST['name']
         phone = request.POST['phone']
         subject = request.POST['subject']
-        sender = "mon2.srivastava@gmail.com"
+        sender = "Kaushlendra@youngskytravels.com"
         msg = request.POST['msg']
         # Example address data
         from_address = [name, email]
@@ -87,11 +87,11 @@ def inquiry(request):
         s.ehlo()
         s.starttls()
         s.ehlo()
-        s.login("mon2.srivastava@gmail.com", "xxuencnvjliqtymv")
-        s.sendmail("mon2.srivastava@gmail.com", recipient[1], str_io.getvalue())
-        return render(request, 'success_query.html')
+        s.login("youngskytravels@gmail.com", "tatpwgeicdqttlma")
+        s.sendmail("Kaushlendra@youngskytravels.com", recipient[1], str_io.getvalue())
+        return render(request, 'index.html')
     return render(request, 'inquiry_form.html', args)
-
+# Kaushlendra@youngskytravels.com
 
 def personal(request):
     title = Heading.objects.get(pk=1)
@@ -106,5 +106,6 @@ def personal(request):
 def day_nights(request):
     id = request.GET['it']
     off = offer.objects.get(pk=id)
-    args = {'off':off}
-    return render(request, 'cust_pers_dest.html', args)
+    foot = footer.objects.get(pk=1)
+    args = {'off':off, 'foot': foot}
+    return render(request, 'cust_pers.html', args)

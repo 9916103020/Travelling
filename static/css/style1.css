@@ -21,7 +21,7 @@ html, body {
 }
 
 .slider-control {
-  z-index: auto;
+  z-index: 2;
   position: absolute;
   top: 0;
   width: 12%;
@@ -51,7 +51,7 @@ html, body {
 
 .slider-pagi {
   position: absolute;
-  z-index: auto;
+  z-index: 3;
   left: 50%;
   bottom: 2rem;
   -webkit-transform: translateX(-50%);
@@ -92,7 +92,7 @@ html, body {
 }
 
 .slider {
-  z-index: auto;
+  z-index: 1;
   position: relative;
   height: 100%;
 }
@@ -152,13 +152,11 @@ html, body {
 .slide:nth-child(2) .slide__overlay-path {
   fill: #e1ccae;
 }
-
 @media (max-width: 991px) {
   .slide:nth-child(2) .slide__text {
     background-color: rgba(225, 204, 174, 0.8);
   }
 }
-
 .slide:nth-child(3) {
   left: 200%;
 }
